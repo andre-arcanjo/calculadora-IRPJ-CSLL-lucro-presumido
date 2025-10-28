@@ -78,10 +78,6 @@ footer {
 }
 
 @media screen and (min-width:1373px) {
-    body {
-        height: 100vh;
-    }
-    
     .componente {
         padding: 0 40px;
     }
