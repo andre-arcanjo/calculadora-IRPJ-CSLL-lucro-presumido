@@ -11,6 +11,7 @@ O sistema permite inserir as receitas mensais, calcular automaticamente as bases
 
 ## Funcionalidades
 
+-  Validação dos campos de entrada (inputs) 
 -  Cálculo automático de IRPJ e CSLL com base nas receitas inseridas  
 -  Soma de receitas mensais (vendas, serviços, outras receitas)  
 -  Aplicação das alíquotas corretas para cada tipo de receita  

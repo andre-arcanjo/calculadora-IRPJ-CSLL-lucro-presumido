@@ -33,7 +33,32 @@ function formatarMoeda(valor) {
     return valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
 }
 
+function validarInputs() {
+    let inputs = document.querySelectorAll('input');
+    let mensagemValidacao = document.querySelector('.validacao')
+    
+    let inputsValidados = true;
+
+    inputs.forEach((input) => {
+        if(input.value === "") {
+            inputsValidados = false;
+            input.classList.add('input-nao-preenchido');
+            mensagemValidacao.classList.add('mostrar');
+        }else {
+            input.classList.remove('input-nao-preenchido');
+            mensagemValidacao.classList.remove('mostrar');
+        }
+    })
+
+    return inputsValidados;
+}
+
 calcular.addEventListener('click', () => {
+
+    if (!validarInputs()) {
+        return;
+    }
+
     const somaReceitaVendas = somarMeses(['receita-vendas-mes1', 'receita-vendas-mes2', 'receita-vendas-mes3']);
     const somaAluguelServicos = somarMeses(['aluguel-servicos-mes1', 'aluguel-servicos-mes2', 'aluguel-servicos-mes3']);
     const somaOutrasReceitas = somarMeses(['outras-receitas-mes1', 'outras-receitas-mes2', 'outras-receitas-mes3']);
@@ -58,4 +83,5 @@ calcular.addEventListener('click', () => {
     adicional.innerHTML = `Adicional: ${formatarMoeda(adicionalIrpj)}`;
     irpj.innerHTML = `<strong>Valor do IRPJ: ${formatarMoeda(valorIrpj)}</strong>`;
     csll.innerHTML = `<strong>Valor da CSLL: ${formatarMoeda(valorCsll)}</strong>`;
+
 });
