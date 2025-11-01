@@ -39,6 +39,8 @@ function validarInputs() {
     
     let inputsValidados = true;
 
+    mensagemValidacao.classList.remove('mostrar')
+
     inputs.forEach((input) => {
         if(input.value === "") {
             inputsValidados = false;
@@ -46,7 +48,6 @@ function validarInputs() {
             mensagemValidacao.classList.add('mostrar');
         }else {
             input.classList.remove('input-nao-preenchido');
-            mensagemValidacao.classList.remove('mostrar');
         }
     })
 
