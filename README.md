@@ -29,7 +29,7 @@ https://andre-arcanjo.github.io/calculadora-IRPJ-CSLL-lucro-presumido/
 
 1. Faça o clone do repositório:
    ```bash
-   git clone https://github.com/seu-usuario/calculadora-irpj-csll.git
+   git clone https://github.com/andre-arcanjo/calculadora-irpj-csll.git
 
 2. Acesse a pasta do projeto:
 
