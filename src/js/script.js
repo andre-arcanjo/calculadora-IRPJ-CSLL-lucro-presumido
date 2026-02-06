@@ -68,16 +68,18 @@ calcular.addEventListener('click', () => {
     const adicionalIrpj = somaBcIr > limiteAdicional ? (somaBcIr - limiteAdicional) * aliquotas.adicionalIrpj : 0;
     const valorIrpj = somaBcIr * aliquotas.irpj + adicionalIrpj - somaIrpjRetido;
     const valorCsll = somaBcCs * aliquotas.csll - somaCsllRetida;
+    document.getElementById('valor-irpj-numero').textContent = formatarMoeda(valorIrpj);
+    document.getElementById('valor-csll-numero').textContent = formatarMoeda(valorCsll);
 
-    totalReceitaVendas.innerHTML = `Total: ${formatarMoeda(somaReceitaVendas)}`;
-    totalAluguelServicos.innerHTML = `Total: ${formatarMoeda(somaAluguelServicos)}`;
-    totalOutrasReceitas.innerHTML = `Total: ${formatarMoeda(somaOutrasReceitas)}`;
-    totalIrpjRetido.innerHTML = `Total: ${formatarMoeda(somaIrpjRetido)}`;
-    totalCsllRetida.innerHTML = `Total: ${formatarMoeda(somaCsllRetida)}`;
-    bcIrpj.innerHTML = `Base de cálculo IRPJ: ${formatarMoeda(somaBcIr)}`;
-    bcCsll.innerHTML = `Base de cálculo CSLL: ${formatarMoeda(somaBcCs)}`;
-    adicional.innerHTML = `Adicional: ${formatarMoeda(adicionalIrpj)}`;
-    irpj.innerHTML = `<strong>Valor do IRPJ: ${formatarMoeda(valorIrpj)}</strong>`;
-    csll.innerHTML = `<strong>Valor da CSLL: ${formatarMoeda(valorCsll)}</strong>`;
+    totalReceitaVendas.textContent = `Total: ${formatarMoeda(somaReceitaVendas)}`;
+    totalAluguelServicos.textContent = `Total: ${formatarMoeda(somaAluguelServicos)}`;
+    totalOutrasReceitas.textContent = `Total: ${formatarMoeda(somaOutrasReceitas)}`;
+    totalIrpjRetido.textContent = `Total: ${formatarMoeda(somaIrpjRetido)}`;
+    totalCsllRetida.textContent = `Total: ${formatarMoeda(somaCsllRetida)}`;
+    bcIrpj.textContent = `Base de cálculo IRPJ: ${formatarMoeda(somaBcIr)}`;
+    bcCsll.textContent = `Base de cálculo CSLL: ${formatarMoeda(somaBcCs)}`;
+    adicional.textContent = `Adicional: ${formatarMoeda(adicionalIrpj)}`;
+    document.getElementById('valor-irpj-numero').textContent = formatarMoeda(valorIrpj);
+    document.getElementById('valor-csll-numero').textContent = formatarMoeda(valorCsll);
 
 });
