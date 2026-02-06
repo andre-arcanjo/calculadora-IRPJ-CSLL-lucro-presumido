@@ -18,65 +18,71 @@
                 <div class="componente receita-vendas">
                     <p>Receita de Vendas</p>
                     <p>Mês 01</p>
-                    <input type="number" name="receita-vendas-mes1" value="" id="receita-vendas-mes1">
+                    <input type="number" name="receita-vendas-mes1" value="0" id="receita-vendas-mes1">
                     <p>Mês 02</p>
-                    <input type="number" name="receita-vendas-mes2" value="" id="receita-vendas-mes2">
+                    <input type="number" name="receita-vendas-mes2" value="0" id="receita-vendas-mes2">
                     <p>Mês 03</p>
-                    <input type="number" name="receita-vendas-mes3" value="" id="receita-vendas-mes3">
+                    <input type="number" name="receita-vendas-mes3" value="0" id="receita-vendas-mes3">
                     <p class="total-receita-vendas">Total:</p>
                 </div>
                 <div class="componente aluguel-servicos">
                     <p>Aluguel/Serviços</p>
                     <p>Mês 01</p>
-                    <input type="number" name="aluguel-servicos-mes1" value="" id="aluguel-servicos-mes1">
+                    <input type="number" name="aluguel-servicos-mes1" value="0" id="aluguel-servicos-mes1">
                     <p>Mês 02</p>
-                    <input type="number" name="aluguel-servicos-mes2" value="" id="aluguel-servicos-mes2">
+                    <input type="number" name="aluguel-servicos-mes2" value="0" id="aluguel-servicos-mes2">
                     <p>Mês 03</p>
-                    <input type="number" name="aluguel-servicos-mes3" value="" id="aluguel-servicos-mes3">
+                    <input type="number" name="aluguel-servicos-mes3" value="0" id="aluguel-servicos-mes3">
                     <p class="total-aluguel-servicos">Total:</p>
                 </div>
                 <div class="componente outras-receitas">
                     <p>Outras Receitas</p>
                     <p>Mês 01</p>
-                    <input type="number" name="outras-receitas-mes1" value="" id="outras-receitas-mes1">
+                    <input type="number" name="outras-receitas-mes1" value="0" id="outras-receitas-mes1">
                     <p>Mês 02</p>
-                    <input type="number" name="outras-receitas-mes2" value="" id="outras-receitas-mes2">
+                    <input type="number" name="outras-receitas-mes2" value="0" id="outras-receitas-mes2">
                     <p>Mês 03</p>
-                    <input type="number" name="outras-receitas-mes3" value="" id="outras-receitas-mes3">
+                    <input type="number" name="outras-receitas-mes3" value="0" id="outras-receitas-mes3">
                     <p class="total-outras-receitas">Total:</p>
                 </div>
                 <div class="componente irpj-retido">
                     <p>IRPJ Retido</p>
                     <p>Mês 01</p>
-                    <input type="number" name="irpj-retido-mes1" value="" id="irpj-retido-mes1">
+                    <input type="number" name="irpj-retido-mes1" value="0" id="irpj-retido-mes1">
                     <p>Mês 02</p>
-                    <input type="number" name="irpj-retido-mes2" value="" id="irpj-retido-mes2">
+                    <input type="number" name="irpj-retido-mes2" value="0" id="irpj-retido-mes2">
                     <p>Mês 03</p>
-                    <input type="number" name="irpj-retido-mes3" value="" id="irpj-retido-mes3">
+                    <input type="number" name="irpj-retido-mes3" value="0" id="irpj-retido-mes3">
                     <p class="total-irpj-retido">Total:</p>
                 </div>
                 <div class="componente csll-retida">
                     <p>CSLL Retida</p>
                     <p>Mês 01</p>
-                    <input type="number" name="csll-retida-mes1" value="" id="csll-retida-mes1">
+                    <input type="number" name="csll-retida-mes1" value="0" id="csll-retida-mes1">
                     <p>Mês 02</p>
-                    <input type="number" name="csll-retida-mes2" value="" id="csll-retida-mes2">
+                    <input type="number" name="csll-retida-mes2" value="0" id="csll-retida-mes2">
                     <p>Mês 03</p>
-                    <input type="number" name="csll-retida-mes3" value="" id="csll-retida-mes3">
+                    <input type="number" name="csll-retida-mes3" value="0" id="csll-retida-mes3">
                     <p class="total-csll-retida">Total:</p>
                 </div>
             </div>
 
             <div class="totais">
-                <p class="validacao">Preencha todos os campos!</p>
+                <p class="validacao"></p>
                 <div class="irpj">
                     <p class="bc-irpj">Base de cálculo IRPJ:</p>
                     <p class="adicional">Adicional:</p>
-                    <p class="valor-irpj"><strong>Valor do IRPJ:</strong></p>
+                    <p class="valor-irpj">
+                        <strong>Valor do IRPJ:</strong>
+                        <span id="valor-irpj-numero"></span>
+                    </p>
                 </div>
                 <div class="csll">
                     <p class="bc-csll">Base de cálculo CSLL:</p>
-                    <p class="valor-csll"><strong>Valor da CSLL:</strong></p>
+                    <p class="valor-csll">
+                        <strong>Valor da CSLL:</strong>
+                        <span id="valor-csll-numero"></span> 
+                    </p>
                 </div>
                 <div class="botao">
                     <button id="calcular">Calcular Impostos</button>

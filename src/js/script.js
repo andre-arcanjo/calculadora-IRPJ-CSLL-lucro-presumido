@@ -18,17 +18,11 @@ const totalCsllRetida = document.querySelector('.total-csll-retida');
 const bcIrpj = document.querySelector('.bc-irpj');
 const bcCsll = document.querySelector('.bc-csll');
 const adicional = document.querySelector('.adicional');
-const irpj = document.querySelector('.valor-irpj');
-const csll = document.querySelector('.valor-csll');
-
-// o "||" evita erro caso o campo esteja vazio(usa 0 no lugar)
 
 function somarMeses(ids) {
     return ids.reduce((total, id) => total + (+document.getElementById(id).value || 0), 0);
 }
 
-
-//função para formatar um número em formato de moeda R$
 function formatarMoeda(valor) {
     return valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
 }
@@ -36,17 +30,18 @@ function formatarMoeda(valor) {
 function validarInputs() {
     let inputs = document.querySelectorAll('input');
     let mensagemValidacao = document.querySelector('.validacao')
-    
+
     let inputsValidados = true;
 
     mensagemValidacao.classList.remove('mostrar')
 
     inputs.forEach((input) => {
-        if(input.value === "") {
+        if (+input.value < 0) {
             inputsValidados = false;
             input.classList.add('input-nao-preenchido');
-            mensagemValidacao.classList.add('mostrar');
-        }else {
+            mensagemValidacao.textContent = "Valores não podem ser negativos.";
+            mensagemValidacao.classList.add('mostrar')
+        } else {
             input.classList.remove('input-nao-preenchido');
         }
     })
