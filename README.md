@@ -1,7 +1,10 @@
 # Informações do Projeto
 
-Uma aplicação web simples e funcional desenvolvida para auxiliar no cálculo de impostos empresariais (IRPJ e CSLL) sob o regime de Lucro Presumido.  
+Uma aplicação web simples e funcional desenvolvida para auxiliar no cálculo de impostos empresariais (IRPJ e CSLL) no regime de Lucro Presumido.
+
 O sistema permite inserir as receitas mensais, calcular automaticamente as bases de cálculo e exibir os valores finais de forma clara e organizada.
+
+O projeto foi desenvolvido com foco em boas práticas de JavaScript, validação de dados e manipulação segura do DOM.
 
 ## Tecnologias Utilizadas
 
@@ -11,14 +14,35 @@ O sistema permite inserir as receitas mensais, calcular automaticamente as bases
 
 ## Funcionalidades
 
--  Validação dos campos de entrada (inputs) 
--  Cálculo automático de IRPJ e CSLL com base nas receitas inseridas  
--  Soma de receitas mensais (vendas, serviços, outras receitas)  
--  Aplicação das alíquotas corretas para cada tipo de receita  
--  Cálculo de adicional de IRPJ quando a base ultrapassa R$ 60.000,00  
--  Desconto de impostos retidos (IRPJ e CSLL)  
--  Exibição dos resultados formatados em moeda brasileira (R$)* 
--  Layout responsivo para uso em qualquer dispositivo
+- Validação dos campos de entrada (inputs)
+
+- Bloqueio de valores negativos nos campos numéricos
+
+- Mensagens de erro mais claras para o usuário
+
+- Cálculo automático de IRPJ e CSLL com base nas receitas inseridas
+
+- Soma de receitas mensais (vendas, serviços e outras receitas)
+
+- Aplicação das alíquotas corretas para cada tipo de receita
+
+- Cálculo de adicional de IRPJ quando a base ultrapassa R$ 60.000,00
+
+- Desconto de impostos retidos (IRPJ e CSLL)
+
+- Exibição dos resultados formatados em moeda brasileira (R$)
+
+- Layout responsivo para uso em qualquer dispositivo
+
+## Melhorias Recentes
+
+- Refatoração do código para uso de textContent em vez de innerHTML (mais segurança e performance)
+
+- Separação de elementos <span> para exibição de valores
+
+- Melhor organização da manipulação do DOM
+
+- Aprimoramento da experiência do usuário (UX) nas validações
 
 ## Demonstração
 
